@@ -1,0 +1,30 @@
+@{
+    ViewData["Title"] = "Template";
+}
+
+<div class="container">
+
+    <h1> >>> Sistema de Controle Interno - Template <<< </h1>
+
+            <table class="table table-hover table-sm table-bordered table-sm caption-top">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope=" col">data</th>
+                        <th scope="col">Versão</th>
+                        <th scope="col">descrição</th>
+                        <th scope="col">autor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   @foreach (var item in @ViewBag.listaTemplate)
+                { 
+
+                    <tr>
+                        <th scope="row">@item.data</th>
+                        <td>@item.Versão</td>
+                        <td>@item.descrição</td>
+                        <td>@item.autor</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
